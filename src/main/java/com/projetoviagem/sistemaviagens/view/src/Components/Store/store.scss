@@ -1,0 +1,176 @@
+:root {
+    --azul: #4484ce;
+    --amarelo: #f9cf00;
+    --laranja: #f19f4d;
+    --cinza: #d8e7e5;
+    --cor-texto: #324257;
+    --branco: #f1f1f1;
+    --gradientColor: linear-gradient(to right, #6aa9f1, #1f72d8);
+  }
+
+  .store{
+    width: 100%;
+    .secTitle {
+      .title {
+        position: relative;
+        width: max-content;
+        color: var(--cor-texto);
+        margin: 0.5rem 0;
+        z-index: 2;
+  
+        &::after {
+          position: absolute;
+          content: '';
+          background: var(--cinza);
+          height: 5px;
+          width: 120px;
+          right: 0;
+          bottom: 5px;
+          z-index: -1;
+        }
+      }
+    }
+    
+    .secBuyContent{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--laranja);
+      border-radius: 5px;
+      padding: 1rem;
+
+      p{
+        color: var(--branco);
+      }
+
+      
+    }
+  
+    .secContent {
+      justify-content: center;
+      gap: 1.5rem;
+      .singleDestination {
+        margin: 1rem 0;
+        height: 100%;
+        display: grid;
+        row-gap: 10px;
+        align-items: center;
+        background: var(--branco);
+        box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.50);
+        overflow: hidden;
+        border-radius: 10px;
+        }
+  
+        .imageDiv {
+          height: 180px;
+          width: 100%;
+          overflow: hidden;
+  
+  
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 2s ease;
+          }
+          &:hover{
+            img{
+              transform: scale(1.1);
+            }
+          }
+        }
+  
+        .cardInfo{
+          padding: 1rem;
+          
+          .destTitle{
+            color: #000000;
+            font-size: 1.25rem;
+          }
+  
+          .continent{
+            gap: .5rem;
+            
+            .icon{
+              color: var(--cor-texto);
+              font-size: 18px;
+            }
+            .name{
+              color: var(--cor-texto);
+              font-weight: 400;
+              font-size: 14px;
+            }
+          }
+  
+          .fees{
+            width: 100%;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-top: 1.5px solid var(--cor-texto);
+            border-bottom: 1.5px solid var(--cor-texto);
+  
+            .grade{
+              color: #000000;
+              max-width: 100px;
+              line-height: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              small{
+                text-align: center;
+                background: var(--gradientColor);
+                color: var(--branco);
+                padding: 1px 10px;
+                font-size: 10px;
+              }
+            }
+  
+            .price{
+              font-size: 2rem;
+              color: #000000;
+            }
+  
+          }
+  
+          .desc{
+            font-size: 13.5px;
+            color: var(--cor-texto);
+            font-weight: 500;
+          }
+  
+          .btn{
+            margin-top: 1rem;
+            color: var(--branco);
+            font-weight: 600;
+            justify-content: space-between;
+            gap: .5rem;
+  
+            .icon{
+              align-self: center;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  
+  @media screen and (min-width: 500px) {
+    .title{
+      font-size: 1.5rem;
+      &::after{
+        width: 155px !important;
+      }
+    }
+    .secContent{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+    .desc{
+      max-width: 200px;
+    }
+  
+  }

@@ -1,0 +1,188 @@
+:root {
+  --azul:#4484ce ;
+  --amarelo:#f9cf00 ;
+  --laranja:#f19f4d;
+  --cinza:#d9d9d9;
+  --cor-texto:#324257;
+  --branco:#f1f1f1;
+  --gradientColor: linear-gradient(to right, #6aa9f1, #1f72d8);
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.footer .videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.footer .videoDiv video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer .videoDiv::after {
+  content: "";
+  position: absolute;
+  background: rgba(10, 84, 107, 0.307);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  mix-blend-mode: multiply;
+}
+.footer .secContent {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 2rem initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  row-gap: 2rem;
+  z-index: 100;
+}
+.footer .contactDiv {
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .contactDiv .text small {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--branco);
+}
+.footer .contactDiv .text h2 {
+  color: var(branco);
+  font-size: 1.8rem;
+}
+.footer .contactDiv .inputDiv {
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+.footer .contactDiv .inputDiv input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 3rem;
+  border: 1px solid var(--branco);
+  outline: none;
+  background: transparent;
+  color: var(--branco);
+}
+.footer .contactDiv .inputDiv input::-moz-placeholder {
+  color: var(--branco);
+  opacity: 0.5;
+}
+.footer .contactDiv .inputDiv input:-ms-input-placeholder {
+  color: var(--branco);
+  opacity: 0.5;
+}
+.footer .contactDiv .inputDiv input::placeholder {
+  color: var(--branco);
+  opacity: 0.5;
+}
+.footer .contactDiv .inputDiv .btn {
+  width: 100%;
+  justify-content: center;
+  color: var(--branco);
+  font-weight: 500;
+  gap: 5rem;
+}
+.footer .contactDiv .inputDiv .btn .icon {
+  font-size: 18px;
+}
+.footer .footerCard {
+  position: relative;
+  padding: 1rem 1rem 4rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background: var(--branco);
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.footer .footerCard .footerIntro {
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.footer .footerCard .logoDiv .logo {
+  color: black;
+  font-weight: 600;
+}
+.footer .footerCard .logoDiv .logo .icon {
+  font-size: 25px;
+  color: var(--azul);
+}
+.footer .footerCard .footerParagraph {
+  font-size: 13px;
+  color: var(--cor-texto);
+}
+.footer .footerCard .footerSocials {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.footer .footerCard .footerSocials .icon {
+  color: var(--azul);
+  font-size: 20px;
+}
+.footer .footerCard .footerSocials .icon:hover {
+  color: var(--laranja);
+}
+.footer .footerCard .footerLinks {
+  flex-basis: 50%;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.footer .footerCard .footerLinks .linkGroup .groupTitle {
+  display: block;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+.footer .footerCard .footerLinks .linkGroup .footerList {
+  font-size: 15px;
+  color: var(--cor-texto);
+  transition: 0.3s ease-in-out;
+}
+.footer .footerCard .footerLinks .linkGroup .footerList .icon {
+  font-size: 15px;
+  color: var(--cor-texto);
+}
+.footer .footerCard .footerLinks .linkGroup .footerList:hover {
+  color: var(--laranja);
+  transform: translateX(10px);
+}
+.footer .footerCard .footerDiv {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--laranja);
+  padding: 0.5rem 2rem;
+}
+.footer .footerCard .footerDiv small {
+  font-size: 10px;
+  color: var(--branco);
+}
+.footer .footerCard .footerDiv small .icon {
+  font-size: 10px;
+  margin-right: 2px;
+}/*# sourceMappingURL=footer.css.map */

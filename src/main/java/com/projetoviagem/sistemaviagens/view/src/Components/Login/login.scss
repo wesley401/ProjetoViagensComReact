@@ -1,0 +1,54 @@
+:root {
+  --azul: #4484ce;
+  --amarelo: #f9cf00;
+  --laranja: #f19f4d;
+  --cinza: #d9d9d9;
+  --cor-texto: #324257;
+  --branco: #f1f1f1;
+  --gradientColor: linear-gradient(to right, #6aa9f1, #1f72d8);
+}
+
+.login {
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  justify-content: center;
+  .input {
+    height: 40px;
+    padding: 0 1rem;
+    background: var(--cinza);
+    border-radius: 3rem;
+    margin-top: 0.3rem;
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 13px;
+      font-weight: 500;
+      &::placeholder {
+        font-size: 13px;
+        color: var(--cor-texto);
+      }
+    }
+  }
+  
+  .btnLogin{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: end;
+    button{
+        color: var(--branco);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+    .login{
+        .input{
+            max-width: 70%;
+        }
+    }
+}

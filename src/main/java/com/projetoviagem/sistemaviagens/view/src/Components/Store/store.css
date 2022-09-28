@@ -1,0 +1,152 @@
+:root {
+  --azul: #4484ce;
+  --amarelo: #f9cf00;
+  --laranja: #f19f4d;
+  --cinza: #d8e7e5;
+  --cor-texto: #324257;
+  --branco: #f1f1f1;
+  --gradientColor: linear-gradient(to right, #6aa9f1, #1f72d8);
+}
+
+.store {
+  width: 100%;
+}
+.store .secTitle .title {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--cor-texto);
+  margin: 0.5rem 0;
+  z-index: 2;
+}
+.store .secTitle .title::after {
+  position: absolute;
+  content: "";
+  background: var(--cinza);
+  height: 5px;
+  width: 120px;
+  right: 0;
+  bottom: 5px;
+  z-index: -1;
+}
+.store .secBuyContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--laranja);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.store .secBuyContent p {
+  color: var(--branco);
+}
+.store .secContent {
+  justify-content: center;
+  gap: 1.5rem;
+}
+.store .secContent .singleDestination {
+  margin: 1rem 0;
+  height: 100%;
+  display: grid;
+  row-gap: 10px;
+  align-items: center;
+  background: var(--branco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.store .secContent .imageDiv {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+.store .secContent .imageDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 2s ease;
+}
+.store .secContent .imageDiv:hover img {
+  transform: scale(1.1);
+}
+.store .secContent .cardInfo {
+  padding: 1rem;
+}
+.store .secContent .cardInfo .destTitle {
+  color: #000000;
+  font-size: 1.25rem;
+}
+.store .secContent .cardInfo .continent {
+  gap: 0.5rem;
+}
+.store .secContent .cardInfo .continent .icon {
+  color: var(--cor-texto);
+  font-size: 18px;
+}
+.store .secContent .cardInfo .continent .name {
+  color: var(--cor-texto);
+  font-weight: 400;
+  font-size: 14px;
+}
+.store .secContent .cardInfo .fees {
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1.5px solid var(--cor-texto);
+  border-bottom: 1.5px solid var(--cor-texto);
+}
+.store .secContent .cardInfo .fees .grade {
+  color: #000000;
+  max-width: 100px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.store .secContent .cardInfo .fees .grade small {
+  text-align: center;
+  background: var(--gradientColor);
+  color: var(--branco);
+  padding: 1px 10px;
+  font-size: 10px;
+}
+.store .secContent .cardInfo .fees .price {
+  font-size: 2rem;
+  color: #000000;
+}
+.store .secContent .cardInfo .desc {
+  font-size: 13.5px;
+  color: var(--cor-texto);
+  font-weight: 500;
+}
+.store .secContent .cardInfo .btn {
+  margin-top: 1rem;
+  color: var(--branco);
+  font-weight: 600;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.store .secContent .cardInfo .btn .icon {
+  align-self: center;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .secContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .desc {
+    max-width: 200px;
+  }
+}/*# sourceMappingURL=store.css.map */

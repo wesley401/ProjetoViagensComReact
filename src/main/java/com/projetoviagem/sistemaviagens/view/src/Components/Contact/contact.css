@@ -1,0 +1,37 @@
+:root {
+  --azul: #4484ce;
+  --amarelo: #f9cf00;
+  --laranja: #f19f4d;
+  --cinza: #d9d9d9;
+  --cor-texto: #324257;
+  --branco: #f1f1f1;
+  --gradientColor: linear-gradient(to right, #6aa9f1, #1f72d8);
+}
+
+.Contact {
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  justify-content: center;
+}
+.Contact input {
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 100%;
+}
+.Contact textarea {
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 100%;
+}
+.Contact select {
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=contact.css.map */
