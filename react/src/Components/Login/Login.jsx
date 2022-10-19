@@ -15,7 +15,7 @@ export default function Login() {
   const handleClick=(e)=>{
     e.preventDefault()
     const usuario={nome,login,senha}
-    console.log(usuario)
+    
     fetch("http://localhost:8080/usuario/add",{
       method:"POST",
       headers:{"Content-type":"application/json"},
@@ -23,12 +23,17 @@ export default function Login() {
     }).then(()=>{
       alert("Novo usuario Adicionado!!")
     })
+    console.log(usuario)
   }
   
   return (
     <section data-aos="fade-up" className="section">
       <div className="container">
         <div className="login">
+        <label htmlFor="name">Nome de Usuario:</label>
+          <div className="input">
+            <input type="name" placeholder="Nome" required/>
+          </div>
           <label htmlFor="email">Email:</label>
           <div className="input">
             <input type="text" placeholder="email" required/>
@@ -42,7 +47,7 @@ export default function Login() {
           </div>
         </div>
         <div  data-aos="fade-up" className="login">
-        <label htmlFor="email" >Nome:</label>
+        <label htmlFor="email" >Nome de Usuario:</label>
           <div className="input">
             <input type="text"placeholder="nome" required 
             value={nome}
@@ -60,9 +65,13 @@ export default function Login() {
             value={senha}
             onChange={(e)=>setSenha(e.target.value)}/>
           </div>
-          <label htmlFor="email">Cep:</label>
+          <label htmlFor="cep">Cep:</label>
           <div className="input">
-            <input type="text" placeholder="cep"/>
+            <input type="text" placeholder="########"/>
+          </div>
+          <label htmlFor="number">Telefone:</label>
+          <div className="input">
+            <input type="number" placeholder="Telefone"/>
           </div>
           <div className="btnLogin">
             <button className="btn" onClick={handleClick}>Cadastrar</button>

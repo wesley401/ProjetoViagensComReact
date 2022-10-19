@@ -16,9 +16,8 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @PostMapping("/add")
-    public String add(@RequestBody Usuario usuario){
-        usuarioService.salvarUsuario(usuario);
-        return "novo estudante foi adicionado";
+    public Usuario create(@RequestBody Usuario usuario) {
+        return usuarioService.salvarUsuario(usuario);
     }
     @GetMapping("/getAll")
     public List<Usuario> getAllUsuarios(){
